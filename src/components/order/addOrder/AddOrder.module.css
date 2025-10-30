@@ -1,0 +1,18 @@
+.addOrderContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.inputWrapper {
+  flex: 1 1 calc(20% - 16px);
+  min-width: 100px;
+}
+
+.buttonWrapper {
+  margin-left: auto;
+  margin-top: 0.7rem;
+}

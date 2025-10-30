@@ -1,0 +1,52 @@
+.beforeHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2%;
+  justify-content: space-between;
+}
+.viewStyle {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d8dae5;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  padding-inline: 7px;
+  padding-block: 5px;
+  gap: 7px;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.selectedIcon {
+  opacity: 1;
+  background-color: #ffd7e4;
+  cursor: pointer;
+  border-radius: 5px;
+  /* padding: 0.2rem; */
+}
+
+.viewIMG {
+  cursor: pointer;
+}
+
+.stockButtons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.stockButtonStyle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.5rem;
+  border-radius: 5px;
+  padding-inline: 7px;
+  padding-block: 5px;
+  height: max-content;
+  padding-block: 8px;
+}

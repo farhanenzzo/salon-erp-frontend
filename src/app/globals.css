@@ -1,0 +1,767 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-montserrat), sans-serif;
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 50px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  color: black;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+}
+
+h6 {
+  font-size: 13px;
+  font-weight: 600;
+  color: black;
+}
+
+p {
+  color: #757575;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  font-family: var(--font-lato), sans-serif;
+}
+
+/* body {
+  font-family: var(--font-lato);
+} */
+
+label {
+  white-space: nowrap;
+  display: inline-block;
+  width: max-content;
+}
+
+.rightsReserved {
+  position: absolute;
+  bottom: 15px;
+}
+
+.fontRed {
+  color: #9b0e53;
+}
+
+.tabs_container {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.beforeHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2%;
+  justify-content: space-between;
+}
+.viewStyle {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d8dae5;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  padding-inline: 7px;
+  padding-block: 5px;
+  gap: 7px;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ----- Table design ----- */
+
+.table {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  /* overflow: hidden; */
+  padding-block: 2%;
+  padding-inline: 20px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.header {
+  display: flex;
+  background-color: #f0f2f5;
+  font-weight: bold;
+  padding-inline: 10px;
+}
+
+.cell {
+  flex: 1;
+  padding: 15px;
+  /* text-align: center; */
+  font-size: 13px;
+}
+
+.row {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  padding-inline: 15px;
+  position: relative;
+}
+
+.actionsIcon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.beforeHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2%;
+  justify-content: space-between;
+}
+.viewStyle {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d8dae5;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  padding-inline: 7px;
+  padding-block: 5px;
+  gap: 7px;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.viewIMG {
+  cursor: pointer;
+}
+
+.mainIMG {
+  object-fit: cover;
+  height: 100vh;
+}
+
+.selectedIcon {
+  opacity: 1;
+  background-color: #ffd7e4;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.redText {
+  color: red;
+}
+
+.p-checkbox .p-checkbox-box {
+  border: 1px solid #d8dae5 !important;
+}
+
+.p-checkbox .p-checkbox-box.p-highlight {
+  border-color: var(--primary-color) !important;
+  background: var(--primary-color) !important;
+}
+
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
+  border-color: var(--primary-color) !important;
+}
+
+/* Input number type styles  */
+/* Hide arrows in Firefox */
+/* input[type="number"] {
+  -moz-appearance: textfield;
+} */
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.numberCount input[type="number"]::-webkit-outer-spin-button,
+.numberCount input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: auto;
+}
+
+/* skeleton loader  */
+
+/* Global skeleton loader styles */
+/* Global skeleton loader styles */
+.skeleton {
+  background-color: #e0e0e0;
+  /* Light gray color */
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+/* Specific skeleton styles for different elements */
+.skeleton-text {
+  height: 1.5rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.skeleton-thumbnail {
+  height: 180px;
+  width: 320px;
+  border-radius: 8px;
+}
+
+.skeleton-title {
+  height: 1.5rem;
+  width: 60%;
+  margin-bottom: 0.5rem;
+}
+
+.skeleton-description {
+  height: 1rem;
+  width: 80%;
+  margin-bottom: 0.5rem;
+}
+
+/* Table Status styles  */
+
+.status {
+  padding-block: 0.5rem;
+  padding-inline: 0.8rem;
+  border-radius: 7px;
+  /* width: max-content;
+  max-width: max-content; */
+  font-size: 13px;
+  display: flex;
+  align-self: flex-start;
+  justify-content: center;
+  text-wrap: nowrap;
+}
+
+.positive_status {
+  color: #33b843;
+  background-color: #e5fcda;
+}
+
+.negative_status {
+  color: #e71c1c;
+  background-color: #fcdada;
+  white-space: nowrap; /* Prevents text wrapping */
+  overflow: hidden; /* Hides overflowing text */
+}
+
+.neutral_status {
+  color: #ff9619;
+  background-color: #ffe8cd;
+}
+
+.live_status {
+  color: #9b0e53;
+  background-color: #ffc5d0;
+}
+/* Stock grid screen stock status design  */
+.Positive_text {
+  color: #33b843;
+  font-size: 12px;
+}
+
+.Negative_text {
+  color: #ff6533;
+  font-size: 13px;
+}
+
+.activeDOT,
+.inactiveDOT {
+  width: 0.5rem;
+  border-radius: 100%;
+  height: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.activeDOT {
+  background-color: #3ebc4c;
+}
+.inactiveDOT {
+  background-color: red;
+}
+
+/* Tooltip custom theme style  */
+
+.tippy-box[data-theme~="custom"] {
+  background-color: #5f002b !important;
+  color: white !important;
+}
+
+.tippy-arrow[data-theme~="custom"] {
+  background-color: #5f002b !important;
+  color: #5f002b;
+}
+
+.tippy-box[data-theme~="custom"][data-placement^="top"] > .tippy-arrow::before {
+  border-top-color: #5f002b;
+}
+
+.tippy-box[data-theme~="custom"][data-placement^="bottom"]
+  > .tippy-arrow::before {
+  border-bottom-color: #5f002b;
+}
+
+.tippy-box[data-theme~="custom"][data-placement^="left"]
+  > .tippy-arrow::before {
+  border-left-color: #5f002b;
+}
+
+.tippy-box[data-theme~="custom"][data-placement^="right"]
+  > .tippy-arrow::before {
+  border-right-color: #5f002b;
+}
+
+.p-dropdown-items-wrapper li {
+  text-transform: capitalize;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.p-datatable-wrapper {
+  overflow: visible !important;
+}
+
+/* File upload  */
+
+.p-button.p-fileupload-choose {
+  background: #f6f6f6;
+  border-radius: 10px;
+  padding-block: 0.5rem;
+  width: 100%;
+  padding-block: 0.8rem;
+  /* padding-left: 2.4rem; */
+  padding-right: 0.3rem;
+}
+
+.modalInput .p-button-label .p-clickable {
+  color: lightgray;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.modalInput .p-button-label {
+  flex: none !important;
+  text-align: left;
+}
+
+.modalInput .p-button svg {
+  color: lightgray !important;
+}
+
+/* Modal popup designs  */
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOutScale {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContainer {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 550px;
+  position: relative;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeInScale 0.3s ease-in-out forwards;
+}
+
+.modalContainer.fadeOut {
+  animation: fadeOutScale 0.3s ease-in-out forwards;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.modalBody {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Optional: space between the items */
+}
+
+.inputContainer {
+  flex: 1 1 calc(50% - 16px); /* Two inputs per row, minus the gap */
+  min-width: 200px; /* Optional: minimum width for input containers */
+  box-sizing: border-box;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.highlightContainer {
+  background-color: #fddfe8;
+  color: #9b0e53;
+  padding-inline: 0.4rem;
+  padding-block: 0.3rem;
+  border-radius: 5px;
+  width: max-content;
+}
+
+.link {
+  color: #4a78ff;
+  cursor: pointer;
+}
+
+/* Settings tab  */
+
+.optionsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantity_container {
+  background-color: #f0f2f5;
+  padding-block: 0.5rem;
+  padding-inline: 1.5rem;
+  border-radius: 5px;
+}
+
+.settingsTabSaveBTN {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-block: 1rem;
+}
+
+/* Sidebar styles  */
+
+.tabContent {
+  padding: 20px;
+  overflow-y: auto;
+  height: calc(100vh - 60px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dashboard styles  */
+
+.dashboard {
+  --sidebar-width: 280px;
+  --sidebar-collapsed-width: 80px;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mainContainer {
+  flex-grow: 1;
+  margin-left: var(--sidebar-width);
+  background-color: #f0f2f5;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 100px;
+  box-sizing: border-box;
+  overflow: auto;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebarCollapsed {
+  margin-left: var(--sidebar-collapsed-width);
+}
+
+/* Base styles (for mobile) */
+.tabContent {
+  font-size: 14px;
+}
+
+/* Notification settings  */
+
+.tabContainer {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* --------------------------- */
+
+.inputContainer {
+  background: #f6f6f6;
+  border-radius: 10px;
+  padding-block: 0.5rem;
+  width: 100%;
+  padding-block: 0.9rem;
+  padding-left: 2.4rem;
+  padding-right: 0.3rem;
+}
+
+/* Action menu  */
+
+.actionMenuContainer {
+  position: absolute;
+  top: 2.5rem;
+  right: 13rem;
+}
+
+/* Loader design  */
+
+/* Add this to your globals.css file */
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+
+.logo-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.company-logo {
+  width: 100%;
+  animation: zoomInOut 2s infinite ease-in-out;
+}
+
+@keyframes zoomInOut {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.loading-text {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+.loading-text span {
+  opacity: 0;
+  animation: fadeInOut 1.5s infinite;
+}
+
+.loading-text span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.loading-text span:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .company-logo,
+  .loading-text span {
+    animation: none;
+  }
+}
+
+.p-radio {
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* .p-radio input[type="radio"]:checked + .p-radio-label .p-radio-icon {
+  border-color: #007ad9;
+} */
+
+.p-radiobutton-box {
+  border: 0.5px solid #ccc;
+}
+
+/* Global Scrollbar Styling */
+* {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: transparent transparent; /* Adjust the colors for Firefox */
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+  width: 8px; /* Adjust the width of the scrollbar */
+  height: 8px; /* Adjust the height for horizontal scrollbar if necessary */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Lighter background for the track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2); /* Semi-transparent thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3); /* Slightly darker thumb on hover */
+}
+
+/* Dropdown styles  */
+
+.dropdownContainer {
+  background: #f6f6f6;
+  border-radius: 0.5rem;
+  padding-left: 0.75rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  font-size: 0.875rem;
+  /* color: #757575; */
+  width: 100%;
+  outline: none;
+  border-width: 0;
+  text-transform: capitalize;
+}
+
+.p-dropdown .p-dropdown-label.p-placeholder {
+  color: #757575;
+  font-size: 0.9rem;
+}
+
+.p-datatable th {
+  white-space: nowrap;
+}
+
+.p-fileupload-content .p-fileupload-empty {
+  color: #757575; /* Replace with your desired color */
+}
+
+.modalInput .p-button-label {
+  color: #757575; /* Change to your desired color */
+}
+
+/* Error state styling */
+.dropdownContainer.error {
+  border-color: #f56565;
+}
+
+.dropdownContainer select {
+  outline: none !important;
+  border-width: 0 !important;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 16px; /* Adjust this value as needed */
+  font-weight: 500; /* Optional: Adjust the weight */
+}

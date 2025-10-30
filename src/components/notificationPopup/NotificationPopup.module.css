@@ -1,0 +1,93 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.popup {
+  position: absolute;
+  top: 5rem;
+  right: 15rem;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 300px;
+  border-radius: 8px;
+  padding: 10px;
+  opacity: 0; /* Initial state */
+  transform: translateY(-20px); /* Initial state */
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.open {
+  animation: fadeIn 0.3s forwards;
+}
+
+.close {
+  animation: fadeOut 0.3s forwards;
+}
+
+.popupHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notificationList {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.notificationItem {
+  padding: 5px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.notificationItem p {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.notificationItem p span {
+  font-weight: 400;
+}
+
+.readNotification {
+  opacity: 0.7;
+  background-color: #f0f0f0;
+  margin-bottom: 0.5rem;
+  border-left: 2px solid transparent; /* Add a transparent border for consistency */
+}
+
+.unreadNotification {
+  background-color: #ffffff;
+  border-left: 3px solid #9b0e53;
+  margin-bottom: 0.5rem;
+}
+
+.unreadIndicator {
+  width: 8px;
+  height: 8px;
+  background-color: #9b0e53;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}

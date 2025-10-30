@@ -1,0 +1,49 @@
+.employeeDataContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.employeesSection {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.7rem;
+  background-color: #f6f6f6;
+  padding: 0.8rem;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.employeeImg {
+  width: 65px;
+  height: 56px;
+  display: flex; /* Prevents shrinking */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensures images don’t overflow */
+}
+
+.empDetails p {
+  text-transform: capitalize;
+}
+
+.employeeImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the box */
+  object-position: top; /* Shows the top part of the image */
+  border-radius: 10%;
+}
+
+.empDetails {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+}
+
+.timerContain {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}

@@ -1,0 +1,32 @@
+"use client";
+import { useRouter } from "next/navigation";
+import React from "react";
+
+const BackButton = ({ color, title = "" }) => {
+  const router = useRouter();
+  const handleBack = () => {
+    router.back();
+  };
+
+  return (
+    <div className="flex items-center gap-3">
+      <div onClick={handleBack} style={{ cursor: "pointer" }}>
+        <svg
+          width="40"
+          height="41"
+          viewBox="0 0 40 41"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M26.9833 3.92049H13.0166C6.94992 3.92049 3.33325 7.53715 3.33325 13.6038V27.5538C3.33325 33.6372 6.94992 37.2538 13.0166 37.2538H26.9666C33.0333 37.2538 36.6499 33.6372 36.6499 27.5705V13.6038C36.6666 7.53715 33.0499 3.92049 26.9833 3.92049ZM22.9833 25.5872C23.4666 26.0705 23.4666 26.8705 22.9833 27.3538C22.7333 27.6038 22.4166 27.7205 22.0999 27.7205C21.7833 27.7205 21.4666 27.6038 21.2166 27.3538L15.3333 21.4705C14.8499 20.9872 14.8499 20.1872 15.3333 19.7038L21.2166 13.8205C21.6999 13.3372 22.4999 13.3372 22.9833 13.8205C23.4666 14.3038 23.4666 15.1038 22.9833 15.5872L17.9833 20.5872L22.9833 25.5872Z"
+            fill={color ? color : "black"}
+          />
+        </svg>
+      </div>
+      <h2>{title}</h2>
+    </div>
+  );
+};
+
+export default BackButton;

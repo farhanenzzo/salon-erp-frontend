@@ -1,0 +1,10 @@
+.custom_radio:focus {
+  background-color: red !important;
+}
+
+.inputContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

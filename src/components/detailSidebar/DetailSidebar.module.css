@@ -1,0 +1,9 @@
+.sidebar {
+  width: 50%;
+}
+
+.footerButtons {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}

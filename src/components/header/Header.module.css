@@ -1,0 +1,58 @@
+.header {
+  position: fixed;
+  top: 10px;
+  left: 300px;
+  width: calc(100% - 320px); /* Ensure it spans across the container width */
+  height: 88px;
+  background-color: white;
+  /* color: white; */
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 30px;
+  align-items: center;
+  z-index: 1000;
+  box-sizing: border-box;
+  border-radius: 10px;
+  gap: 20px;
+}
+
+.notificationIcon {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f28f3f;
+  border-radius: 6px;
+}
+
+.userDetails p {
+  text-transform: capitalize;
+}
+
+.notificationCount {
+  background-color: #9b0e53;
+  position: absolute;
+  top: 7px;
+  right: 5px;
+  width: 17px;
+  height: 17px;
+  font-size: 10px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: drop-down 0.5s ease forwards;
+}
+
+@keyframes drop-down {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

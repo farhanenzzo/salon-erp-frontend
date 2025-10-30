@@ -1,0 +1,64 @@
+.skeletonContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftSection,
+.rightSection {
+  width: 100%;
+}
+
+.lineContain {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailSection {
+  display: flex;
+}
+
+.commonContainerWithIMG {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.skeletonImage {
+  width: 80px;
+  height: 80px;
+  background: #ddd;
+  border-radius: 50%;
+}
+
+.skeletonText {
+  margin-left: 10px;
+}
+
+.skeletonTitle {
+  height: 20px;
+  background: #ddd;
+  margin-bottom: 10px;
+}
+
+.skeletonValue {
+  height: 30px;
+  background: #ddd;
+}
+
+.skeletonDropdown {
+  height: 40px;
+  background: #ddd;
+  margin-top: 10px;
+}
+
+.skeletonPieChart,
+.skeletonBarChart,
+.skeletonDoughnutChart,
+.skeletonEmployees,
+.skeletonCalendar,
+.skeletonUpcomingAppointments {
+  height: 200px;
+  background: #ddd;
+  margin-top: 10px;
+  border-radius: 4px;
+}

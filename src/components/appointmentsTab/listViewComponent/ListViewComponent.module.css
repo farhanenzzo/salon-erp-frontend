@@ -1,0 +1,163 @@
+.header {
+  display: flex;
+  background-color: #f0f2f5;
+  font-weight: bold;
+  padding-inline: 10px;
+}
+
+.cell {
+  flex: 1;
+  padding: 15px;
+  /* text-align: center; */
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.row {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  padding-inline: 15px;
+  position: relative;
+}
+
+.actionsIcon {
+  position: absolute;
+  right: 2rem;
+  top: 10px;
+  cursor: pointer;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.beforeHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2%;
+  justify-content: space-between;
+}
+.viewStyle {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d8dae5;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  padding-inline: 7px;
+  padding-block: 5px;
+  gap: 7px;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.viewIMG {
+  cursor: pointer;
+}
+
+.actionRelativeContainer {
+  position: relative;
+}
+
+.actionMenuContainer {
+  position: absolute;
+  top: 1.5rem;
+  right: 0;
+  background-color: white;
+  border-top-right-radius: 0;
+  z-index: 999999999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* padding: 1rem; */
+  width: 200px;
+  max-height: 300px;
+  /* overflow-y: auto; */
+  cursor: pointer;
+}
+
+.nothingToDisplay {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding-block: 10%;
+}
+
+/* Skeleton loader styles */
+.skeleton {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+/* Specific skeleton styles for different elements */
+.skeletonHeader {
+  height: 2rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.skeletonCell {
+  height: 1.5rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.skeletonRow {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+
+.skeletonActions {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}
+/* 
+.datatable button {
+  background-color: red;
+  color: white;
+  margin-inline: 0.5rem;
+} */
+
+.singleLineDate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+}

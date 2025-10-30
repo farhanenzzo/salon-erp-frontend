@@ -1,0 +1,31 @@
+.sidebar {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  /* padding: 20px; */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  /* margin-bottom: 0.5rem; */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sidebar p {
+  font-size: 14px;
+}
+
+.sidebar .activeTab {
+  background-color: #9b0e53;
+}
+
+.sidebar li:hover {
+  background-color: rgba(155, 14, 83, 0.5);
+}

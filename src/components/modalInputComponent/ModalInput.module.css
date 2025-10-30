@@ -1,0 +1,73 @@
+.--visible-months {
+  background-color: red !important;
+}
+
+.customDatePicker
+  .w-\[calc\(var\(--visible-months\)_\*_var\(--calendar-width\)\)\] {
+  background-color: white;
+}
+
+.dropdownContainer {
+  background: #f6f6f6;
+  border-radius: 0.5rem;
+  padding-left: 0.75rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  font-size: 0.875rem;
+  color: #757575;
+  width: 100%;
+  outline: none;
+  border-width: 0;
+  text-transform: capitalize;
+}
+
+/* Error state styling */
+.dropdownContainer.error {
+  border-color: #f56565;
+}
+
+.dropdownContainer select {
+  outline: none !important;
+  border-width: 0 !important;
+}
+
+.inputContainer {
+  background: #f6f6f6;
+  border-radius: 10px;
+  width: 100%;
+  padding-block: 0.9rem;
+  padding-right: 0.9rem;
+  color: #757575;
+}
+
+.dateAndTime input {
+  background: #f6f6f6;
+  border-radius: 10px;
+  color: #333;
+  cursor: pointer;
+}
+
+.dateOnly,
+.dateAndTime {
+  cursor: pointer;
+}
+
+.noIcon {
+  padding-left: 1rem;
+}
+
+.dateOnly,
+.dateAndTime {
+  background: #f6f6f6;
+  border-radius: 10px;
+  padding-block: 0.8rem;
+  width: 100%;
+  padding-left: 2.4rem;
+  padding-right: 0.3rem;
+}
+
+.dateOnly input {
+  background: #f6f6f6;
+  border-radius: 10px;
+  color: #333;
+}

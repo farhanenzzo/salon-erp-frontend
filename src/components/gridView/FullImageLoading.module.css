@@ -1,0 +1,29 @@
+.gridContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Ensure items start from the left */
+  gap: 1rem;
+}
+
+.stocksGrid {
+  border: 0.5px solid #d8dae5;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  width: calc(25% - 1rem);
+  box-sizing: border-box;
+  gap: 1rem;
+}
+
+.fullWidthSkeleton {
+  width: 50%;
+}
+
+.skeletonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1rem;
+}

@@ -1,0 +1,48 @@
+.galleryItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.servicesContainer {
+  position: relative;
+  width: calc(20% - 1rem);
+  padding-top: 18%;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.categoryContainer {
+  position: absolute;
+  z-index: 99;
+  bottom: 1rem;
+  left: 1.5rem;
+  background-color: rgba(155, 14, 83, 0.9);
+  color: white;
+  width: max-content;
+  text-align: center;
+  padding-block: 0.3rem;
+  padding-inline: 1rem;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+.actionButton {
+  background-color: white;
+  padding-inline: 0.5rem;
+  padding-block: 0.7rem;
+  border-radius: 5px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.actionMenu {
+  position: absolute;
+  top: 3rem;
+  right: 12rem;
+  z-index: 999;
+}

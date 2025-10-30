@@ -1,0 +1,23 @@
+.AddImageModal {
+  max-width: 650px;
+  max-height: 380px;
+  position: relative;
+}
+
+.modalContain {
+  height: 50% !important;
+  position: relative;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 70%;
+}
+
+.closeButton {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  z-index: 999;
+}

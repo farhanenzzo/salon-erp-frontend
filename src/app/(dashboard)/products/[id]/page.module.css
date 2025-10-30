@@ -1,0 +1,16 @@
+.productDetails_container {
+  display: flex;
+  /* align-items: center; */
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.productDetails_container h2 {
+  color: #757575;
+  text-wrap: nowrap;
+}
+
+.productDetails_container span {
+  color: black;
+  font-weight: 700;
+}

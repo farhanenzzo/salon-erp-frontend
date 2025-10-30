@@ -1,0 +1,13 @@
+.masterTabsContainer {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.activeTab {
+  color: #9b0e53;
+  font-weight: 600;
+  border-bottom: 1.5px solid #9b0e53 !important;
+}

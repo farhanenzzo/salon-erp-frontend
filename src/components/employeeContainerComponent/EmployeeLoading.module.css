@@ -1,0 +1,11 @@
+.loadingDes {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.7rem;
+  padding: 0.8rem;
+}
+
+.serviceTime {
+  display: flex;
+  justify-content: space-between;
+}

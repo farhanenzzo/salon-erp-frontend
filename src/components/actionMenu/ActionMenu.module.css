@@ -1,0 +1,58 @@
+.actionMenuContainer {
+  position: absolute;
+  background-color: white;
+  z-index: 99999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 180px; /* Set minimum width */
+  border-radius: 4px; /* Add border radius */
+  overflow: hidden; /* Ensure child hover effects don't spill */
+  right: 0; /* Align to the right of the trigger */
+  top: 100%; /* Position below the trigger */
+  margin-top: 4px; /* Small gap from trigger */
+}
+
+.actionMenu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  position: relative; /* For hover effect */
+  width: 100%; /* Ensure full width */
+}
+
+.actionMenu p {
+  font-size: 14px;
+  color: gray;
+  margin: 0; /* Remove default margins */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.actionMenu:hover {
+  background-color: #ffd7eb;
+  box-shadow: inset 3px 0 0 0 red;
+}
+
+.actionMenu:hover .icon {
+  transform: scale(1.1); /* Smooth icon scale on hover */
+  transition: transform 0.2s ease;
+}
+
+/* Add responsive styles */
+@media screen and (max-width: 768px) {
+  .actionMenuContainer {
+    position: fixed;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    max-width: 300px;
+    top: auto;
+  }
+
+  .actionMenu {
+    padding: 1rem; /* Slightly larger touch targets on mobile */
+  }
+}

@@ -1,0 +1,181 @@
+/* ReviewCard.module.css */
+.reviewWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.reviewCard {
+  flex: 1 1 calc(33.333% - 1rem);
+  max-width: calc(33.333% - 1rem);
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+  padding-block: 1rem;
+  padding-left: 0.7rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.headerDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.reviewImage {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.reviewInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 0.7rem;
+}
+
+.reviewName {
+  font-weight: bold;
+}
+
+.nameAndRating {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.reviewDate {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.starRating {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.comment {
+  border-radius: 5px;
+  padding-block: 0.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 200px;
+}
+
+.commentText {
+  width: 80%;
+  font-size: 14px;
+}
+
+.replySection {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  padding-right: 0.7rem;
+}
+
+.replyContainer {
+  width: 100%;
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  padding-right: 1.5rem;
+}
+
+.replyContainer p {
+  background-color: white;
+  padding: 0.5rem;
+  text-transform: capitalize;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+  word-break: break-word;
+  max-width: 250px; /* Add this to control reply width */
+  margin-left: auto; /* This will push content to right */
+}
+
+.replyItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: 0.5rem;
+}
+
+.editIcon {
+  position: absolute;
+  right: -2rem;
+  cursor: pointer;
+}
+
+.replyInput {
+  flex-grow: 1;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: none;
+  resize: none;
+  height: 40px;
+}
+
+.loadingReviews {
+  display: flex;
+  gap: 1rem;
+}
+
+/* .replyItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  justify-content: end;
+  margin-right: 1rem;
+  width: 90%;
+} */
+
+.replyInput:focus {
+  border-color: #4caf50;
+}
+
+.replyMessage {
+  display: flex;
+  position: relative;
+  justify-content: flex-end; /* Add this to align to right */
+  width: fit-content; /* Add this to wrap content properly */
+  margin-left: auto; /* Add this to push to right */
+}
+
+.replyButton {
+  background-color: #ff8c2e;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  height: 40px;
+}
+
+@media (max-width: 1280px) {
+  .reviewCard {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 940px) {
+  .reviewCard {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
