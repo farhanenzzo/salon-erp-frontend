@@ -30,7 +30,7 @@ import useModulePermissions from "../../hooks/useModulePermissions";
 import dynamic from "next/dynamic";
 import { validateInput } from "../../validators/validateInputs";
 
-const DetailModal = dynamic(() => import("../DetailModal/DetailModal"), {
+const DetailModal = dynamic(() => import("../detailModal/DetailModal"), {
   ssr: false,
 });
 const ModalComponent = dynamic(

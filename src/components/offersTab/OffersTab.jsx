@@ -37,7 +37,7 @@ const ModalComponent = dynamic(
   { ssr: false }
 );
 
-const DetailModal = dynamic(() => import("../DetailModal/DetailModal"), {
+const DetailModal = dynamic(() => import("../detailModal/DetailModal"), {
   ssr: false,
 });
 
