@@ -102,7 +102,10 @@ const Sidebar = ({ isCollapsed }) => {
               );
 
               const matchedTab = tabsData.find(
-                (tab) => tab.tabName === module.moduleName
+                (tab) =>
+                  tab.tabName === module.moduleName ||
+                  (module.moduleName === "Transations" &&
+                    tab.tabName === "Transactions")
               ); // Find matching tab data based on module name
 
               return matchedTab ? (
