@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import LOGO from "../../assets/images/Grotech-04.svg";
+import LOGO from "../../assets/svg/Grotech-04.svg";
 import styles from "./Sidebar.module.css";
 import CollapsedLogo from "../../assets/images/Grotech-06.png";
 import { usePathname } from "next/navigation";

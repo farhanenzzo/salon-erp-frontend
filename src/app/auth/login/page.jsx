@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { IMG_ALT, LOGIN_SCREEN, ROUTES } from "../../../constants";
 // import Logo from "../../../assets/svg/brandSpinLogo.svg";
-import Logo from "../../../assets/images/Grotech-04.svg";
+import Logo from "../../../assets/svg/Grotech-04.svg";
 import MainIMG from "../../../assets/images/authScreenBG.jpg";
 import { loginInputData } from "../../../utils/data";
 import LoginForm from "./LoginForm";

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import MainIMG from "../../../assets/images/authScreenBG.webp";
-import Logo from "../../../assets/images/Grotech-04.svg";
+import Logo from "../../../assets/svg/Grotech-04.svg";
 import CommonButton from "../../../components/commonButton/CommonButton";
 import { createSaloonRequiredFields, signUpCompany } from "../../../utils/data";
 import Link from "next/link";
