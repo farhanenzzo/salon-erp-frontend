@@ -34,7 +34,7 @@ const TabsHeader = ({
   const getIconColor = (view, selectedView) => {
     const defaultColor = "#757575";
 
-    const selectedColor = "#9B0E53";
+    const selectedColor = "#EEC1FF";
 
     return view === selectedView ? selectedColor : defaultColor;
   };

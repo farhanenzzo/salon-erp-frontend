@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import MainIMG from "../../../assets/images/authScreenBG.webp";
-import Logo from "../../../assets/svg/brandSpinLogo.svg";
+import Logo from "../../../assets/images/Grotech-04.svg";
 import CommonButton from "../../../components/commonButton/CommonButton";
 import { createSaloonRequiredFields, signUpCompany } from "../../../utils/data";
 import Link from "next/link";
@@ -94,9 +94,9 @@ const Signup = () => {
       <div className="flex-1 flex items-center justify-center p-4 relative">
         <div className="w-full max-w-md justify-center align-middle">
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <Image src={Logo} alt="Logo" />
+            <Image src={Logo} alt="Logo" className="w-60 h-60"/>
           </div>
-          <h1 className="mb-4 text-center">Create Your Salon</h1>
+          {/* <h1 className="mb-4 text-center">Create Your Salon</h1> */}
           <p className="text-lg text-center">Setup your Salon profile</p>
           <div className={styles.inputContainer}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-9 mb-4">
@@ -177,7 +177,7 @@ const Signup = () => {
           </p>
         </div>
         <div className="rightsReserved">
-          <p className="text-center">@2024 LuxeLooks All Rights Reserved.</p>
+          <p className="text-center">@2025 Grotech All Rights Reserved.</p>
         </div>
       </div>
       <div className="flex-1 relative hidden md:block">

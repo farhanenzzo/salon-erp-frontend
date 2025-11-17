@@ -10,8 +10,8 @@ import "primeicons/primeicons.css";
 import ReduxProvider from "../components/reduxProvider/ReduxProvider";
 
 export const metadata = {
-  title: "LuxeLooks",
-  description: "Saloon admin panel",
+  title: "Grothech",
+  description: "STYLE IS GURANTEED & TIME IS BALANCED",
 };
 
 const montserrat = Montserrat({
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${montserrat.className} ${lato.className}`}>
       <head>
-        <link rel="icon" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.png" />
       </head>
       <body>
         <NextUIProvider>

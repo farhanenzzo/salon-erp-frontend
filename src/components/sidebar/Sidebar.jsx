@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import LOGO from "../../assets/svg/innerLOGO.svg";
+import LOGO from "../../assets/images/Grotech-04.svg";
 import styles from "./Sidebar.module.css";
-import CollapsedLogo from "../../assets/svg/collapsedLogo.svg";
+import CollapsedLogo from "../../assets/images/Grotech-06.png";
 import { usePathname } from "next/navigation";
 import { tabsData } from "../../utils/data";
 import { fetchRolePermissions } from "../../service/api";
@@ -74,7 +74,7 @@ const Sidebar = ({ isCollapsed }) => {
           <Image
             src={LOGO}
             alt="mainLOGO"
-            className={`transition-all duration-300`}
+            className={`transition-all duration-300 w-20 h-20`}
           />
         )}
       </div>
@@ -119,11 +119,11 @@ const Sidebar = ({ isCollapsed }) => {
                   onClick={() => handleModuleID(module.moduleId)}
                 >
                   <li
-                    className={`flex items-center gap-2
+                    className={`flex items-center gap-2 rounded-full
                       px-5 py-5 cursor-pointer
                       transition-all duration-200
-                      hover:bg-[rgba(155,14,83,0.5)]
-                      ${isActive ? "bg-[#9b0e53]" : ""}
+                      hover:bg-[rgba(238,193,255,0.5)]
+                      ${isActive ? "bg-[#EEC1FF]" : ""}
                       ${isCollapsed ? "justify-center" : ""}
                     `}
                   >

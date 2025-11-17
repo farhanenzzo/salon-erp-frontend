@@ -8,6 +8,6 @@ export const MENU = {
 };
 
 export const PROJECT = {
-  TITLE: "LuxeLooks-Saloon-App",
-  DESCRIPTION: "Saloon admin panel",
+  TITLE: "Grotech",
+  DESCRIPTION: "STYLE IS GURANTEED & TIME IS BALANCED",
 };

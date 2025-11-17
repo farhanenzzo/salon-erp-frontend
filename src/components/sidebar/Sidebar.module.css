@@ -23,9 +23,9 @@
 }
 
 .sidebar .activeTab {
-  background-color: #9b0e53;
+  background-color: #D3D3D3;
 }
 
 .sidebar li:hover {
-  background-color: rgba(155, 14, 83, 0.5);
+  background-color: #D3D3D3;
 }

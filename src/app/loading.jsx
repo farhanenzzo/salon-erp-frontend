@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Logo from "../assets/svg/brandSpinLogo.svg";
+import Logo from "../assets/images/Grotech-06.png";
 
 export default function Loading() {
   return (
