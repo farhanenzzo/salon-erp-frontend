@@ -10,7 +10,7 @@ import "primeicons/primeicons.css";
 import ReduxProvider from "../components/reduxProvider/ReduxProvider";
 
 export const metadata = {
-  title: "Grothech",
+  title: "Grotech",
   description: "STYLE IS GURANTEED & TIME IS BALANCED",
 };
 
