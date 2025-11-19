@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import MainIMG from "../../../assets/images/authScreenBG.webp";
-import Logo from "../../../assets/svg/brandSpinLogo.svg";
+import Logo from "../../../assets/svg/Grotech-04.svg";
 import CommonButton from "../../../components/commonButton/CommonButton";
 import "../../../app/globals.css";
 import BackButton from "../../../components/backbuttonComponent/Backbutton";
@@ -20,7 +20,7 @@ const VerifyEmail = () => {
       </div>
       <div className="flex-1 flex items-center justify-center p-4 relative">
         <div className="w-full max-w-md justify-center align-middle">
-          <Image src={Logo} alt="Logo" className="mx-auto my-7" />
+          <Image src={Logo} alt="Logo" className="w-60 h-60"/>
           <h1 className="mb-4 text-center">Check Your Email </h1>
           <p className="text-lg text-center my-5">
             We have sent a verification link to your email address
