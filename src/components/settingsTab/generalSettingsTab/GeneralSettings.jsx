@@ -138,9 +138,8 @@ const GeneralSettings = () => {
           {generalSettingsInputFields.map((field) => (
             <div
               key={field.id}
-              className={`${field.key === "address" ? styles.address : ""} ${
-                styles.inputFields
-              }`}
+              className={`${field.key === "address" ? styles.address : ""} ${styles.inputFields
+                }`}
             >
               {field.key === COMPANY_KEYMAP.COUNTRY ? (
                 <ModalInput

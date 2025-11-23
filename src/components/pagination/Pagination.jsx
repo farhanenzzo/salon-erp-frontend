@@ -23,14 +23,13 @@ const Pagination = ({ paginationInfo, fetchData }) => {
       {/* Right side - Pagination buttons */}
       <div className="flex items-center gap-2">
         <button
-        type={BUTTON_TYPE.BUTTON}
+          type={BUTTON_TYPE.BUTTON}
           onClick={() => handlePageChange(paginationInfo.page - 1)}
           disabled={paginationInfo.page === 1}
-          className={`px-3 py-1 rounded border ${
-            paginationInfo.page === 1
+          className={`px-3 py-1 rounded border ${paginationInfo.page === 1
               ? "bg-gray-100 text-gray-400 cursor-not-allowed"
               : "hover:bg-gray-50"
-          }`}
+            }`}
         >
           Previous
         </button>
@@ -39,14 +38,13 @@ const Pagination = ({ paginationInfo, fetchData }) => {
         {Array.from({ length: paginationInfo.totalPages }, (_, i) => i + 1).map(
           (pageNum) => (
             <button
-            type={BUTTON_TYPE.BUTTON}
+              type={BUTTON_TYPE.BUTTON}
               key={pageNum}
               onClick={() => handlePageChange(pageNum)}
-              className={`px-3 py-1 rounded ${
-                paginationInfo.page === pageNum
-                  ? "bg-primaryColor text-white"
+              className={`px-3 py-1 rounded ${paginationInfo.page === pageNum
+                  ? "bg-[var(--primary-color)] text-white"
                   : "hover:bg-gray-50 border"
-              }`}
+                }`}
             >
               {pageNum}
             </button>
@@ -56,11 +54,10 @@ const Pagination = ({ paginationInfo, fetchData }) => {
         <button
           onClick={() => handlePageChange(paginationInfo.page + 1)}
           disabled={paginationInfo.page === paginationInfo.totalPages}
-          className={`px-3 py-1 rounded border ${
-            paginationInfo.page === paginationInfo.totalPages
+          className={`px-3 py-1 rounded border ${paginationInfo.page === paginationInfo.totalPages
               ? "bg-gray-100 text-gray-400 cursor-not-allowed"
               : "hover:bg-gray-50"
-          }`}
+            }`}
         >
           Next
         </button>

@@ -321,9 +321,9 @@ export const footerButtons = [
   {
     id: 1,
     label: "Cancel",
-    borderClr: "#FF8C2E",
+    borderClr: "#D11A2A ",
     bgColor: "white",
-    textColor: "#FF8C2E",
+    textColor: "#D11A2A ",
     borderWidth: 1,
   },
   { id: 2, label: "Save", operation: null },
@@ -758,7 +758,7 @@ export const addNewStockModalData = [
 export const miniTabs = [
   { id: 1, name: "General", route: "/settings/general" },
   { id: 2, name: "Users", route: "/settings/user-management" },
-  { id: 3, name: "Roles", route: "/settings/role-management" },
+  // { id: 3, name: "Roles", route: "/settings/role-management" },
   {
     id: 4,
     name: "Master",

@@ -25,7 +25,7 @@ const BarChart = ({ data, loading }) => {
           {
             label: "Revenue",
             data: revenueData,
-            backgroundColor: "#9B0E53", // Solid color for bars
+            backgroundColor: "#EEC1FF", // Solid color for bars
             borderWidth: 0, // No border
             borderRadius: 8, // Rounded corners for bars
           },

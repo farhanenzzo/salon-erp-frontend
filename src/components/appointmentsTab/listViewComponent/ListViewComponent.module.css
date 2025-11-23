@@ -8,7 +8,6 @@
 .cell {
   flex: 1;
   padding: 15px;
-  /* text-align: center; */
   font-size: 13px;
   text-transform: capitalize;
 }
@@ -42,6 +41,7 @@
   margin-bottom: 2%;
   justify-content: space-between;
 }
+
 .viewStyle {
   display: flex;
   align-items: center;
@@ -63,23 +63,66 @@
   cursor: pointer;
 }
 
+/* -- Action menu related styles -- */
 .actionRelativeContainer {
   position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 12px;
 }
 
+/* The clickable action icon/button */
+.actionButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  transition: background-color 0.12s ease;
+}
+.actionButton:hover {
+  background-color: #f3f4f6;
+}
+
+.actionMenuParent {
+  position: relative;
+  overflow: visible !important;
+  z-index: 99999;
+}
+
+/* The popup container */
 .actionMenuContainer {
   position: absolute;
-  top: 1.5rem;
+  top: 100%;
   right: 0;
-  background-color: white;
-  border-top-right-radius: 0;
-  z-index: 999999999;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  /* padding: 1rem; */
-  width: 200px;
-  max-height: 300px;
-  /* overflow-y: auto; */
-  cursor: pointer;
+  background: white;
+  border-radius: 6px;
+  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 999999;
+}
+.datatable :global(.p-datatable-tbody > tr > td) {
+  position: relative !important;
+  overflow: visible !important;
+  z-index: 1 !important;
+}
+
+/* internal wrapper that ActionMenu is rendered inside */
+.actionMenuWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* small responsive tweak */
+@media (max-width: 640px) {
+  .actionMenuContainer {
+    right: 8px;
+    left: 8px;
+    width: auto;
+  }
 }
 
 .nothingToDisplay {
@@ -118,13 +161,11 @@
   0% {
     left: -100%;
   }
-
   100% {
     left: 100%;
   }
 }
 
-/* Specific skeleton styles for different elements */
 .skeletonHeader {
   height: 2rem;
   width: 100%;
@@ -148,12 +189,6 @@
   width: 2rem;
   border-radius: 50%;
 }
-/* 
-.datatable button {
-  background-color: red;
-  color: white;
-  margin-inline: 0.5rem;
-} */
 
 .singleLineDate {
   white-space: nowrap;

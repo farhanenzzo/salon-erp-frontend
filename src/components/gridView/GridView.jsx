@@ -24,10 +24,10 @@ const GridView = ({
   canEdit,
   onGridSelection,
 }) => {
+  console.log("Grid Data", gridData);
   const { openMenuId, handleActionMenu, menuRef } = useActionMenu();
 
   if (!gridData) return null;
-  console.log("gridData", gridData);
 
   const generateClass = (status) =>
     status === "In Stock"
@@ -36,7 +36,9 @@ const GridView = ({
         ? "Negative_text"
         : "";
 
-  const gridDataLength = Object.keys(gridData).length;
+  const gridDataLength = Array.isArray(gridData)
+    ? gridData.length
+    : Object.keys(gridData).length;
 
   return (
     <div className={styles.gridContainer}>
@@ -46,50 +48,65 @@ const GridView = ({
         <GridViewLoading length={gridDataLength} />
       ) : (
         gridData.map((data) => (
-          <>
+          <React.Fragment key={data?._id || data?.id}>
             {gridLayout === "fullImage" ? (
               <div
-                key={data._id}
-                id={data.id}
                 className={styles.employeeGridFullIMG}
-                onClick={() => onGridSelection(data)}
+                onClick={() => {
+                  if (openMenuId !== data._id && onGridSelection) {
+                    onGridSelection(data);
+                  }
+                }}
               >
-                <div
-                  className={styles.actionsIcon}
-                  onClick={() => handleActionMenu(data._id)}
-                >
-                  <Image src={ActionIcon} alt="Action Button" />
-                </div>
+                {/* Action Icon */}
+                {canEdit && (
+                  <div
+                    className={styles.actionsIcon}
+                    onClick={(e) => {
+                      e.stopPropagation(); // Prevent row click
+                      handleActionMenu(
+                        openMenuId === data._id ? null : data._id
+                      );
+                    }}
+                  >
+                    <Image src={ActionIcon} alt="Action Button" />
+                  </div>
+                )}
+
+                {/* Action Menu */}
                 {openMenuId === data._id && canEdit && (
                   <div className={styles.actionMenuContainer} ref={menuRef}>
                     <ActionMenu
                       onDelete={() => onDelete(data._id)}
-                      onClose={() => handleActionMenu(null)}
                       onEdit={() => onEdit(data._id)}
+                      onClose={() => handleActionMenu(null)}
                     />
                   </div>
                 )}
+
                 <div className={styles.empRoleContainer}>
                   {data?.role?.roleName ||
                     data?.clientId ||
                     data?.stockCategory?.name}
                 </div>
+
                 <div
-                  className={[
+                  className={
                     gridLayout === "fullImage"
                       ? styles.fullImageContainer
-                      : styles.stockImageContainer,
-                  ]}
+                      : styles.stockImageContainer
+                  }
                 >
                   <Image
                     src={data.stockImage}
                     alt="Profile photo"
-                    layout={gridLayout === "fullImage" ? "intrinsic" : "fill"} // Conditionally set layout
-                    width={gridLayout === "fullImage" ? 260 : undefined} // Example fixed width for fullImage
-                    height={gridLayout === "fullImage" ? 230 : undefined} // Example fixed height for fullImage
+                    layout={gridLayout === "fullImage" ? "intrinsic" : "fill"}
+                    width={gridLayout === "fullImage" ? 260 : undefined}
+                    height={gridLayout === "fullImage" ? 230 : undefined}
                     objectFit="cover"
                   />
                 </div>
+
                 <div className={styles.stockDtails}>
                   <div
                     className={styles.detailsContainer}
@@ -101,6 +118,7 @@ const GridView = ({
                       <p>{data.stockQuantity}</p>
                     </div>
                   </div>
+
                   <div className={styles.detailsContainer}>
                     <div className={styles.sameLine}>
                       <p className="text-black">Expiry Date:</p>
@@ -114,26 +132,39 @@ const GridView = ({
               </div>
             ) : (
               <div
-                key={data?._id}
-                id={data?.id}
                 className={styles.employeeGrid}
-                onClick={() => onGridSelection(data)}
+                onClick={() => {
+                  if (openMenuId !== data._id && onGridSelection) {
+                    onGridSelection(data);
+                  }
+                }}
               >
-                <div
-                  className={styles.actionsIcon}
-                  onClick={() => handleActionMenu(data._id)}
-                >
-                  <Image src={ActionIcon} alt="Action Button" />
-                </div>
-                {openMenuId === data?._id && (
+                {/* Action Icon */}
+                {canEdit && (
+                  <div
+                    className={styles.actionsIcon}
+                    onClick={(e) => {
+                      e.stopPropagation(); // Prevent row click
+                      handleActionMenu(
+                        openMenuId === data._id ? null : data._id
+                      );
+                    }}
+                  >
+                    <Image src={ActionIcon} alt="Action Button" />
+                  </div>
+                )}
+
+                {/* Action Menu */}
+                {openMenuId === data._id && canEdit && (
                   <div className={styles.actionMenuContainer} ref={menuRef}>
                     <ActionMenu
-                      onDelete={() => onDelete(data?._id)}
+                      onDelete={() => onDelete(data._id)}
+                      onEdit={() => onEdit(data._id)}
                       onClose={() => handleActionMenu(null)}
-                      onEdit={() => onEdit(data?._id)}
                     />
                   </div>
                 )}
+
                 <div className={styles.empProfileContainer}>
                   <Image
                     src={data?.employeePhoto || data?.photo}
@@ -157,20 +188,14 @@ const GridView = ({
                 <div className={styles.empRoleContainer}>
                   {data?.role?.roleName || data?.clientId || data?.stockId}
                 </div>
+
                 <div>
                   <p className="text-center mb-2">
                     {data?.email ? data?.email : null}
                   </p>
                   <h3 className={styles.empID}>{data?.employeeId}</h3>
-                  {/* {data.preferredStylist && (
-                    <p className={styles.preferredStylist}>
-                      Preferred Stylist:{" "}
-                      <span className="text-black font-bold">
-                        {data.preferredStylist.name}
-                      </span>
-                    </p>
-                  )} */}
                 </div>
+
                 <div
                   style={{
                     display: "flex",
@@ -181,19 +206,18 @@ const GridView = ({
                   <Image src={TimerIcon} alt="Timer Icon" />
                   <p style={{ color: "#757575", marginBlock: "0.3rem" }}>
                     {data.lastVisitedDate
-                      ? `Last Visit: ${format(new Date(data.lastVisitedDate), "yyyy-MM-dd")}`
+                      ? `Last Visit: ${format(
+                          new Date(data.lastVisitedDate),
+                          "yyyy-MM-dd"
+                        )}`
                       : data.employeeJoiningData
                         ? `Joined on: ${data.employeeJoiningData}`
                         : NEW_USER}
                   </p>
                 </div>
-                {/* <CommonButton
-                  label={BUTTON_LABELS.BOOK_APPOINTMENT}
-                  canEdit={canEdit}
-                /> */}
               </div>
             )}
-          </>
+          </React.Fragment>
         ))
       )}
     </div>

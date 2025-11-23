@@ -1,34 +1,29 @@
-import { useState, useCallback, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 
-const useActionMenu = (initialOpenId = null) => {
-  const [openMenuId, setOpenMenuId] = useState(initialOpenId);
+const useActionMenu = () => {
+  const [openMenuId, setOpenMenuId] = useState(null);
   const menuRef = useRef(null);
 
-  const handleActionMenu = useCallback((id, event) => {
-    if (event) {
-      event.stopPropagation();
+  const handleActionMenu = (id, e) => {
+    // prevent errors if event is undefined
+    if (e && e.stopPropagation) {
+      e.stopPropagation();
     }
-    setOpenMenuId((prevId) => (prevId === id ? null : id));
-  }, []);
+    setOpenMenuId((prev) => (prev === id ? null : id));
+  };
 
-  const handleClickOutside = useCallback((event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
+  const handleClickOutside = (e) => {
+    if (menuRef.current && !menuRef.current.contains(e.target)) {
       setOpenMenuId(null);
     }
-  }, []);
+  };
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [handleClickOutside]);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
-  return {
-    openMenuId,
-    handleActionMenu,
-    menuRef,
-  };
+  return { openMenuId, handleActionMenu, menuRef };
 };
 
 export default useActionMenu;
